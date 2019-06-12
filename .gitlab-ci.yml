@@ -1,0 +1,19 @@
+image: gcc
+
+build:
+
+  stage: build
+ 
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq zip
+
+  script:
+    - submit/submit.sh
+
+  artifacts:
+    paths:
+      - submit/hash_1 # Will upload this, and download when testing
+      - submit/hash_2
+      - submit/hash_3
+      - submit/hash_4
+      - submit/hash_5

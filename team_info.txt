@@ -1,0 +1,16 @@
+#### UPDATE THESE ####
+# Don't modify other lines: the team name should
+# be on row 7, email on row 10 and members' names
+# one on each line, starting from line 13
+
+Team name:
+Team Monday™
+
+Contact email:
+Mondayssuck@mondays.suck
+
+Team members:
+Me
+Her
+That guy over there
+And the one whose name I can't remember
