@@ -8,7 +8,7 @@ build:
     - apt-get update -qq && apt-get install -y -qq zip
 
   script:
-    - submit/submit.sh
+    - bash submit/submit.sh
 
   artifacts:
     paths:
