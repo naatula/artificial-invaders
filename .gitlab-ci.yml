@@ -12,8 +12,8 @@ build:
 
   artifacts:
     paths:
-      - submit/hash_1 # Will upload this, and download when testing
+      - submit/hash_0 # Will upload this, and download when testing
+      - submit/hash_1
       - submit/hash_2
       - submit/hash_3
       - submit/hash_4
-      - submit/hash_5
