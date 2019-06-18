@@ -11,17 +11,7 @@ do
     if [ "$(ls -A $DIR 2> /dev/null)" ]; then
         # Submission folder is not empty
 
-        # Copy over team info
-        cp team_info.txt $DIR
-
-        echo "Compressing submission for challenge $i!"
-        # Zip the submission
-        zip -rq "$ZIPFILE" "$DIR"
-
-        # TODO check file size, don't send if too large
-
-        # Generate a hash of the zip file
-        HASH="$(md5sum $ZIPFILE)"
+        HASH="$(find $DIR -type f -exec cat '{}' \; | md5sum)"
         OLDHASH="$(cat $HASHFILE)"
 
         # If the hash is stored, the file is already sent:
@@ -30,6 +20,13 @@ do
             echo "These files for challenge $i have already been submitted"
             echo ""
         else
+            echo "Compressing submission for challenge $i!"
+
+            # Zip the submission with the team info
+            zip -rq "$ZIPFILE" "$DIR" "team_info.txt"
+
+            # TODO check file size, don't send if too large
+
             # Send files and save hash into gitlab CI artifact
             echo "$HASH" > $HASHFILE
             #curl -F 'file=$ZIPFILE' http://submit.robotuprising.fi/upload
@@ -42,3 +39,4 @@ do
         echo "No submission for challenge $i"
     fi
 done
+

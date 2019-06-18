@@ -8,12 +8,20 @@ build:
     - apt-get update -qq && apt-get install -y -qq zip
 
   script:
-    - bash submit/submit.sh
+    - submit/submit.sh
 
-  artifacts:
+  cache:
     paths:
-      - submit/hash_0 # Will upload this, and download when testing
-      - submit/hash_1
+      - submit/hash_0
+      - submit/hash_1 # Will upload this, and download when testing
       - submit/hash_2
       - submit/hash_3
       - submit/hash_4
+
+#  cache:
+#    paths:
+#      - Challenge_1/submission.zip # Will save this file for testing
+#      - Challenge_2/submission.zip
+#      - Challenge_3/submission.zip
+#      - Challenge_4/submission.zip
+#      - Challenge_5/submission.zip
