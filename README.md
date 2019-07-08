@@ -30,6 +30,13 @@ The challenge grading is done fully automatically, just push your code to the re
 1. Fork
 2. Go to "settings" -> "CI / CD" -> "Runners" and enable shared runners
 3. Update your team info into the file `team_info.txt`
+  - Add a public team name
+  - Add a secret name for your team: this will be used to verify that no one else have submitted stuff by your team name
+  - Add a contact email for your team
+  - Add team member names: these can be nicknames or real names
+4. To receive the new challenges and other updates to this repo, set up [**Repository Mirroring**](https://about.gitlab.com/2016/12/01/how-to-keep-your-fork-up-to-date-with-its-origin/)
+on **your fork of this repository**.
+  - Tip: setting up development branches for each challenge can prevent merge conflicts in the master branch
 
 ## Submitting Your Solution
 
@@ -37,11 +44,13 @@ When you feel you're ready to submit,
   1. Copy all files you want to submit into the folder `challenge_n/submission`
   2. Commit & Push: the CI will do the rest
 
-Submissions will be evaluated, and scores will be published [here](http://robotuprising.fi/ai-scores)
-    (this might take a couple days for some challenges)
+Submissions will be evaluated, and scores will be published [here](http://lab.robotuprising.fi:8080/scoreboard)
+    (publishing can take a few days as some of the challenges need to be verified by hand)
 
 ## New Challenges
-New Challenges are released [every X days / schedule here]. You'll be notified to the email address you used to [register/apply] to Artificial Invaders.
-To automatically receive the new challenge files, you can setup [**Repository Mirroring**](https://about.gitlab.com/2016/12/01/how-to-keep-your-fork-up-to-date-with-its-origin/)
-on your **Fork of this repository**.
-Tip: set up development branches for each challenge, so you don't run into merge conflicts in the master branch.
+
+The four pre-challenges will be released bi-weekly.
+You'll be notified of updates to the email address you used to register to Artificial Invaders.
+All of the challenges are open for submissions until 01.09.2019.
+The first three challenges are basic learning tasks and the last, 4th challenge is a full game simulation where you get to train against competing solutions created by opponent teams.
+
