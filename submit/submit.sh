@@ -4,7 +4,12 @@
 for i in {0..4}
 do
     DIR="challenge_$i/submission"
-    ZIPFILE="submission$i.zip"
+
+    TEAMNAME="$(cat team_info.txt | head -7 | tail -1)"
+    TODAY="$(date +%d_%m)"
+    US="_"
+
+    ZIPFILE="submission_$i$US$TEAMNAME$US$TODAY.zip"
     HASHFILE="submit/hash_$i"
 
     # Check whether the folder challenge_i/submission has some content
@@ -25,18 +30,22 @@ do
             # Zip the submission with the team info
             zip -rq "$ZIPFILE" "$DIR" "team_info.txt"
 
-            # TODO check file size, don't send if too large
-
-            # Send files and save hash into gitlab CI artifact
+            # Save the hash into a gitlab CI artifact
             echo "$HASH" > $HASHFILE
-            #curl -F 'file=$ZIPFILE' http://submit.robotuprising.fi/upload
-            curl -F "file=@$ZIPFILE"  http://lab.robotuprising.fi:8080/upload
-            echo ""
-            echo "Challenge $i submitted!"
-            echo ""
+
+            # Check file size, don't send if too large (8 MB)
+            if [ $size -lt 8388608 ]; then
+
+                # Send the file
+                curl -F "file=@$ZIPFILE"  http://lab.robotuprising.fi:8080/upload
+                echo ""
+                echo "Challenge $i submitted!"
+                echo ""
+            else
+                echo "Submission size must be less than 8 MB!"
+            fi
         fi
     else
         echo "No submission for challenge $i"
     fi
 done
-
