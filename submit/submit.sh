@@ -5,7 +5,7 @@ for i in {0..4}
 do
     DIR="challenge_$i/submission"
 
-    TEAMNAME="$(cat team_info.txt | head -7 | tail -1)"
+    TEAMNAME="$(cat team_info.txt | head -10 | tail -1)"
     TODAY="$(date +%d_%m)"
     US="_"
 
@@ -33,8 +33,10 @@ do
             # Save the hash into a gitlab CI artifact
             echo "$HASH" > $HASHFILE
 
+            SIZE="$(wc -c < $ZIPFILE)"
+
             # Check file size, don't send if too large (8 MB)
-            if [ $size -lt 8388608 ]; then
+            if [ $SIZE -lt 8388608 ]; then
 
                 # Send the file
                 curl -F "file=@$ZIPFILE"  http://lab.robotuprising.fi:8080/upload
@@ -49,3 +51,4 @@ do
         echo "No submission for challenge $i"
     fi
 done
+

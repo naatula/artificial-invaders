@@ -1,10 +1,13 @@
 #### UPDATE THESE ####
-# Don't modify other lines: the team name should
-# be on row 7, email on row 10 and members' names
-# one on each line, starting from line 13
+# Don't modify other lines: the team name should be on
+# row 7, secret on row 10, email on row 13 and members' names
+# one on each line, starting from line 16
 
 Team name:
 Team Monday™
+
+Team secret name (10-20 characters, only A-Z, a-z and _ allowed)
+very_secret_secret
 
 Contact email:
 Mondayssuck@mondays.suck
