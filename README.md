@@ -25,18 +25,18 @@ Fork this repo to start working on the challenges!
 
 The challenge grading is done fully automatically, just push your code to the repo and the CI will do the rest.
 
-## Setup
+### Setup process
 
 1. Fork
 2. Go to "settings" -> "CI / CD" -> "Runners" and enable shared runners
 3. Update your team info into the file `team_info.txt`
-  - Add a public team name
-  - Add a secret name for your team: this will be used to verify that no one else have submitted stuff by your team name
-  - Add a contact email for your team
-  - Add team member names: these can be nicknames or real names
+    - Add a public team name
+    - Add a secret name for your team: this will be used to verify that no one else have submitted stuff by your team name
+    - Add a contact email for your team
+    - Add team member names: these can be nicknames or real names
 4. To receive the new challenges and other updates to this repo, set up [**Repository Mirroring**](https://about.gitlab.com/2016/12/01/how-to-keep-your-fork-up-to-date-with-its-origin/)
 on **your fork of this repository**.
-  - Tip: setting up development branches for each challenge can prevent merge conflicts in the master branch
+    - Tip: use development branches for each challenge to prevent merge conflicts in the master branch
 
 ## Submitting Your Solution
 
