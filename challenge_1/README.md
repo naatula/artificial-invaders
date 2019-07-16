@@ -11,18 +11,13 @@ gameplay rules. You will start in an arena which simulates the game
 arena for the main event. There are 7 balls scattered about the 
 arena. Your task is to push all 7 balls into the blue goal.
 
-In order to complete this task, you will need to develop functionality to:
-
-- Detect balls
-- Move balls to specified area
-
 Driving around randomly won't help you, since a single ball going through 
 the red goal will result in a failure.
 
-You can freely modify the files under the folder ```challenge/controllers/my_robot/```.
+You can freely modify the files under the folder `challenge/controllers/my_robot/`.
 All other files will be replaced by the original ones.
 
-To open the challenge, open the file ```challenge/arena/challenge1.wbt``` with Webots.
+To open the challenge, open the file `challenge/arena/challenge1.wbt` with Webots.
 
 ### OTHER
 
