@@ -45,9 +45,10 @@ it is provided simply as a playground to make it easier to tweak the algorithm.
 
 #### What you need to do
 
-Modify the OpenCV code to separate the green balls from the yellow ones. The code is in the camera_controller folder.
+Modify the OpenCVClient code to separate the green balls from the yellow ones. The code is in the camera_controller folder.
 Add logic to your existing solution so that it separates the balls into the correct goals.
 
+**Note** that there is a small delay at the start of the simulation to ensure the TCP connections are up.
 
 ### Getting up and running
 
