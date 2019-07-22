@@ -54,3 +54,8 @@ You'll be notified of updates to the email address you used to register to Artif
 All of the challenges are open for submissions until 01.09.2019.
 The first three challenges are basic learning tasks and the last, 4th challenge is a full game simulation where you get to train against competing solutions created by opponent teams.
 
+## Contacts
+
+- To point out problems with the prechallenges or to propose a change, [feel free to open an issue.](https://gitlab.com/artificial-invaders-2019/artificialinvaders2019/issues)
+- For Questions and discussion about the prechallenges or the event in general, join the official [Robot Uprising community telegram channel](https://t.me/joinchat/ClZIsRcqLWiksObFremapw).
+- If you have more personal questions about the application process etc, you can email us at info@robotuprising.fi.
