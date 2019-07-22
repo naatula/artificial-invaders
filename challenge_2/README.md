@@ -56,6 +56,7 @@ If you want to use the Jupyter notebook, the steps below are recommended.
 As an alternative, you can just simply run `pip3 install -r requirements.txt`.
 
 #### Virtual environment setup
+Navigate to the `challenge_2` directory.
 
 Install `venv` on your computer
 
