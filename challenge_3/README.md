@@ -30,6 +30,8 @@ tournament, the mothership holding greater energy status will overpower their
 opponent and win. In case of a tie, the team that collected their points 
 fastest wins.
 
+*Round time is set to **two minutes**. Webots only plays one one round.*
+
 ## Points
 
 Energy cores are presented in the challenge as light and hollow objects in the 
