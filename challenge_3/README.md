@@ -12,9 +12,7 @@ When a solution is submitted it will be run against a solution submitted by
 another applicant team. Be prepared to create solutions for both the red and 
 blue side of the arena. Submitted solutions are run two times a week; every 
 Wednesday and Sunday night. Teams can keep track of their progress on the 
-leaderboard and check the recorded matches at 
-
-`https://robotuprising.fi/test/` 
+leaderboard and check the recorded matches at the leaderboard (coming soon).
 
 ## Game rules
 
@@ -50,7 +48,7 @@ When you feel you're ready to submit,
   1. Copy all files you want to submit into the folder `challenge_n/submission`
   2. Commit & Push: the CI will do the rest
 
-Submissions will be evaluated, and scores will be published [here](http://lab.robotuprising.fi:8080/scoreboard)
+Submissions will be evaluated, and scores will be published on the leaderboard (coming soon).
     (publishing can take a few days as some of the challenges need to be verified by hand)
 
 ### Submitting to challenge 3
