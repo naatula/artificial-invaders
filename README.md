@@ -1,5 +1,8 @@
 # Artificial Invaders
 
+![Challenge 3](img/webots final.png "Webots Final Challenge (Challenge 3)")
+
+
 [Artificial Invaders](https://robotuprising.fi/hackathon/artificial-invaders/) is a story-driven, strategic robotics game designed for hacker teams experienced in Artificial Intelligence and Robotics.
 
 Artificial Invaders consists of two phases: ``pre-challenges`` and ``a physical robot battle tournament``. The pre-challenges are part of our qualification process of the tournament. The best 10 teams will be selected to fight for supremacy of the Robot Uprising universe. 

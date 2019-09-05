@@ -1,5 +1,8 @@
 # Artificial Invaders
 
+![Challenge 3](img/webots_3.png "Webots Challenge 3")
+
+
 ## Game on!
 
 Time for integration and logic. The last released challenge is a full on 

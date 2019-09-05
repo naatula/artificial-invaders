@@ -1,5 +1,8 @@
 ## #1 POWER UP
 
+![Challenge 1](img/webots_1.png "Webots Challenge 1")
+
+
 ### TARGET
 
 Push all balls into the goal

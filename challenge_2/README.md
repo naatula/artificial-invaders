@@ -1,5 +1,8 @@
 ## #2 EYES WIDE OPEN
 
+![Challenge 2](img/webots_2.png "Webots Challenge 2")
+
+
 > Is this the real life? Is this just fantasy?  
 > Caught in a landslide, no escape from reality  
 > Open your eyes, look up to the skies and seeeeee!

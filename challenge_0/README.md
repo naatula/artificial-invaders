@@ -1,5 +1,8 @@
 ## #0 BOTS ON THE RUN
 
+![Challenge 0](img/webots_0.png "Webots Challenge 0")
+
+
 ### TARGET
 
 Gather all coins with your robot.
