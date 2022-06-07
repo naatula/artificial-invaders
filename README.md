@@ -20,7 +20,7 @@ For the pre-challenges, we will provide you a premade robot model and the game a
 
 ## Getting started
 
-1. Install [``Python 3.9 64-bit``](https://www.python.org/downloads/release/python-390/) (3.7, 3.8 work too)
+1. Install [``Python 3.9 64-bit``](https://www.python.org/downloads/release/python-3913/) (3.7, 3.8 work too)
 
 ![Python Setup](img/python.png)
 
