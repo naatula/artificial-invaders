@@ -1,6 +1,6 @@
 # Artificial Invaders
 
-![Challenge 3](img/webots_3.png "Webots Challenge 3")
+![Challenge 3](../img/webots_3.png "Webots Challenge 3")
 
 
 ## Game on!

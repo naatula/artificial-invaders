@@ -1,10 +1,10 @@
 ## #2 EYES WIDE OPEN
 
-![Challenge 2](img/webots_2.png "Webots Challenge 2")
+![Challenge 2](../img/webots_2.png "Webots Challenge 2")
 
 
-> Is this the real life? Is this just fantasy?  
-> Caught in a landslide, no escape from reality  
+> Is this the real life? Is this just fantasy?
+> Caught in a landslide, no escape from reality
 > Open your eyes, look up to the skies and seeeeee!
 
 Blind bots won’t help anyone.
@@ -86,8 +86,5 @@ Make our new environment available to Jupyter Lab
     pip install ipykernel
     sudo robot_env/bin/python -m ipykernel install --name robot_kernel
 
-Next time you open Jupyter Lab, you can change the kernel to `robot_env` and 
+Next time you open Jupyter Lab, you can change the kernel to `robot_env` and
 it will be able to run the notebook with no additional information.
-
-
-
