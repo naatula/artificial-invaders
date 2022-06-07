@@ -21,5 +21,5 @@ while bot.step():
     else:
         bot.set_motors(0, 0)
 
-    print bot.get_position()
-    print bot.get_balls()
+    print("Position:", bot.get_position())
+    print("Balls:", bot.get_balls())
