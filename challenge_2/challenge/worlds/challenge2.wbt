@@ -1,9 +1,17 @@
-#VRML_SIM R2019a utf8
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "../protos/ArucoMarker.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/OldSteel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/PaintedWood.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/ThreadMetalPlate.proto"
+
 DEF _world WorldInfo {
+  coordinateSystem "NUE"
 }
 DEF _camera Viewpoint {
-  orientation 0.6751671111952576 0.6843455629243501 0.2753552659129744 5.183086597485848
-  position -4.42138395015975 5.580221730389301 4.270920043781394
+  orientation -0.8271132956414876 0.562032540485139 -0.0017377021890105661 2.062471231483515
+  position -4.195086626874947 5.636238159929597 4.453793805195519
 }
 DEF _fog Fog {
   color 0.5 0.6 0.6
@@ -54,6 +62,7 @@ DEF _goalie Robot {
     }
     DEF LEFT_TRACK Track {
       translation 0 0 -0.12
+      rotation -1 0 0 1.5707963267948966
       scale 0.5 0.5 0.5
       children [
         DEF WHEEL1 TrackWheel {
@@ -61,7 +70,7 @@ DEF _goalie Robot {
           radius 0.04
           children [
             DEF TRACK_WHEEL_BIG Transform {
-              rotation 1 0 0 1.5708
+              rotation -0.9999999999999999 0 0 3.14158898037044
               children [
                 Shape {
                   appearance PBRAppearance {
@@ -105,7 +114,8 @@ DEF _goalie Robot {
       boundingObject DEF TRACK_BO Group {
         children [
           Transform {
-            translation 0 -0.015 0
+            translation 0 -9.184850993605148e-19 -0.015
+            rotation 1 0 0 1.5707963267948966
             children [
               Box {
                 size 0.4 0.185 0.075
@@ -113,8 +123,8 @@ DEF _goalie Robot {
             ]
           }
           Transform {
-            translation 0.255 -0.04 0
-            rotation 0 0 -1 5.4035477300000005
+            translation 0.255 -2.4492935982947064e-18 -0.04
+            rotation 0.8325093634765446 -0.39174491682973944 0.39174491682973944 1.7530890499738094
             children [
               Box {
                 size 0.09999999999999999 0.05 0.075
@@ -124,8 +134,8 @@ DEF _goalie Robot {
             rotationStep 0.00261799
           }
           Transform {
-            translation -0.255 -0.04 0
-            rotation 0 0 -0.9999999999999999 0.8639534887183441
+            translation -0.255 -2.4492935982947064e-18 -0.04
+            rotation 0.8376869532587218 0.38618685136868647 -0.38618685136868647 1.7469883925903507
             children [
               Box {
                 size 0.1 0.05 0.075
@@ -135,19 +145,19 @@ DEF _goalie Robot {
             rotationStep 0.00261799
           }
           Transform {
-            translation -0.3 0.04999999999966268 0
-            rotation 1 0 0 1.5708
+            translation -0.3 3.0616169978477283e-18 0.04999999999966268
+            rotation 1 0 0 1.570799999984025
             children [
               DEF WHEEL_BO Cylinder {
                 height 0.075
                 radius 0.04
-                subdivision 14
+                subdivision 16
               }
             ]
           }
           Transform {
-            translation 0.3 0.05 0
-            rotation 1 0 0 1.5708
+            translation 0.3 3.061616997868383e-18 0.05
+            rotation 1 0 0 1.570799999984025
             children [
               USE WHEEL_BO
             ]
@@ -197,12 +207,52 @@ DEF _goalie Robot {
     }
     DEF RIGHT_TRACK Track {
       translation 0 0 0.12
+      rotation -1 0 0 1.5707963267948966
       scale 0.5 0.5 0.5
       children [
-        USE WHEEL1
-        USE WHEEL2
-        USE WHEEL3
-        USE WHEEL4
+        DEF WHEEL1 TrackWheel {
+          position -0.30000000000000004 0.05
+          radius 0.04
+          children [
+            DEF TRACK_WHEEL_BIG Transform {
+              rotation -0.9999999999999999 0 0 3.14158898037044
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    roughness 1
+                    metalness 0.7
+                  }
+                  geometry Cylinder {
+                    height 0.075
+                    radius 0.04
+                    subdivision 20
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        DEF WHEEL2 TrackWheel {
+          position 0.3 0.05
+          radius 0.04
+          children [
+            USE TRACK_WHEEL_BIG
+          ]
+        }
+        DEF WHEEL3 TrackWheel {
+          position 0.215 -0.05
+          radius 0.04
+          children [
+            USE TRACK_WHEEL_BIG
+          ]
+        }
+        DEF WHEEL4 TrackWheel {
+          position -0.215 -0.05
+          radius 0.04
+          children [
+            USE TRACK_WHEEL_BIG
+          ]
+        }
       ]
       name "right track"
       contactMaterial "track material"
@@ -227,7 +277,9 @@ DEF _goalie Robot {
     mass 3
   }
   controller "_goalie"
-  controllerArgs "0"
+  controllerArgs [
+    "0"
+  ]
   supervisor TRUE
   synchronization FALSE
 }
@@ -237,7 +289,7 @@ DEF my_robot Robot {
   children [
     ArucoMarker {
       url [
-        "markers/4x4-3.png"
+        "../protos/markers/4x4-3.png"
       ]
     }
     DEF GEOM_SHAPE Group {
@@ -278,6 +330,7 @@ DEF my_robot Robot {
     }
     DEF LEFT_TRACK Track {
       translation 0 0 -0.12
+      rotation -1 0 0 1.5707963267948966
       scale 0.5 0.5 0.5
       children [
         DEF WHEEL1 TrackWheel {
@@ -285,7 +338,7 @@ DEF my_robot Robot {
           radius 0.04
           children [
             DEF TRACK_WHEEL_BIG Transform {
-              rotation 1 0 0 1.5708
+              rotation -0.9999999999999999 0 0 3.14158898037044
               children [
                 Shape {
                   appearance PBRAppearance {
@@ -329,7 +382,8 @@ DEF my_robot Robot {
       boundingObject DEF TRACK_BO Group {
         children [
           Transform {
-            translation 0 -0.015 0
+            translation 0 -9.184850993605148e-19 -0.015
+            rotation 1 0 0 1.5707963267948966
             children [
               Box {
                 size 0.4 0.185 0.075
@@ -337,8 +391,8 @@ DEF my_robot Robot {
             ]
           }
           Transform {
-            translation 0.255 -0.04 0
-            rotation 0 0 -1 5.4035477300000005
+            translation 0.255 -2.4492935982947064e-18 -0.04
+            rotation 0.8325093634765446 -0.39174491682973944 0.39174491682973944 1.7530890499738094
             children [
               Box {
                 size 0.09999999999999999 0.05 0.075
@@ -348,8 +402,8 @@ DEF my_robot Robot {
             rotationStep 0.00261799
           }
           Transform {
-            translation -0.255 -0.04 0
-            rotation 0 0 -0.9999999999999999 0.8639534887183441
+            translation -0.255 -2.4492935982947064e-18 -0.04
+            rotation 0.8376869532587218 0.38618685136868647 -0.38618685136868647 1.7469883925903507
             children [
               Box {
                 size 0.1 0.05 0.075
@@ -359,19 +413,19 @@ DEF my_robot Robot {
             rotationStep 0.00261799
           }
           Transform {
-            translation -0.3 0.04999999999966268 0
-            rotation 1 0 0 1.5708
+            translation -0.3 3.0616169978477283e-18 0.04999999999966268
+            rotation 1 0 0 1.570799999984025
             children [
               DEF WHEEL_BO Cylinder {
                 height 0.075
                 radius 0.04
-                subdivision 14
+                subdivision 16
               }
             ]
           }
           Transform {
-            translation 0.3 0.05 0
-            rotation 1 0 0 1.5708
+            translation 0.3 3.061616997868383e-18 0.05
+            rotation 1 0 0 1.570799999984025
             children [
               USE WHEEL_BO
             ]
@@ -421,12 +475,52 @@ DEF my_robot Robot {
     }
     DEF RIGHT_TRACK Track {
       translation 0 0 0.12
+      rotation -1 0 0 1.5707963267948966
       scale 0.5 0.5 0.5
       children [
-        USE WHEEL1
-        USE WHEEL2
-        USE WHEEL3
-        USE WHEEL4
+        DEF WHEEL1 TrackWheel {
+          position -0.30000000000000004 0.05
+          radius 0.04
+          children [
+            DEF TRACK_WHEEL_BIG Transform {
+              rotation -0.9999999999999999 0 0 3.14158898037044
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    roughness 1
+                    metalness 0.7
+                  }
+                  geometry Cylinder {
+                    height 0.075
+                    radius 0.04
+                    subdivision 20
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        DEF WHEEL2 TrackWheel {
+          position 0.3 0.05
+          radius 0.04
+          children [
+            USE TRACK_WHEEL_BIG
+          ]
+        }
+        DEF WHEEL3 TrackWheel {
+          position 0.215 -0.05
+          radius 0.04
+          children [
+            USE TRACK_WHEEL_BIG
+          ]
+        }
+        DEF WHEEL4 TrackWheel {
+          position -0.215 -0.05
+          radius 0.04
+          children [
+            USE TRACK_WHEEL_BIG
+          ]
+        }
       ]
       name "right track"
       contactMaterial "track material"
@@ -451,7 +545,9 @@ DEF my_robot Robot {
     mass 3
   }
   controller "my_robot"
-  controllerArgs "0"
+  controllerArgs [
+    "0"
+  ]
   supervisor TRUE
   synchronization FALSE
 }
@@ -503,6 +599,7 @@ DEF _lights Group {
 }
 DEF _ground RectangleArena {
   translation 0 -0.12000000000000002 0
+  rotation 1 0 0 -1.5707953071795862
   floorSize 4 4
   floorTileSize 1 1
   floorAppearance PaintedWood {
@@ -518,7 +615,7 @@ DEF top_cam Robot {
   children [
     Camera {
       translation 0 3.07 0
-      rotation 0.9999999999999999 0 0 4.712388966
+      rotation 0.7071067811865475 -0.7071067811865475 -1.091502464086908e-08 3.141592638688632
       fieldOfView 0.9
       width 750
       height 750

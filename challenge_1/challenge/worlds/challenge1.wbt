@@ -4,12 +4,8 @@ DEF _world WorldInfo {
 }
 DEF _camera Viewpoint {
   orientation -0.8197239406060609 0.5727575381115844 -0.0012098485973204703 2.092971253019693
-  position -3.6255857486806575 4.413293939576741 3.7104776695903863
-}
-DEF _fog Fog {
-  color 0.5 0.6 0.6
-  fogType "EXPONENTIAL2"
-  visibilityRange 30
+  position -4.0684181464257145 5.02722048650822 4.141652005533153
+  exposure 10
 }
 DEF _goalie Robot {
   translation -1.401159130782724 -0.060000000000000005 -1.0192971677678329
@@ -230,7 +226,7 @@ DEF _goalie Robot {
     density -1
     mass 40
   }
-  controller "_goalie"
+  controller "Pyry"
   controllerArgs [
     "0"
   ]
@@ -243,7 +239,7 @@ DEF my_robot Robot {
   children [
     ArucoMarker {
       url [
-        "markers/4x4-3.png"
+        "../protos/markers/4x4-3.png"
       ]
     }
     DEF GEOM_SHAPE Group {
@@ -459,7 +455,7 @@ DEF my_robot Robot {
     density -1
     mass 40
   }
-  controller "my_robot"
+  controller "Johannes"
   controllerArgs [
     "0"
   ]

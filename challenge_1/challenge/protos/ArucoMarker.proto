@@ -6,7 +6,7 @@
 
 PROTO ArucoMarker [
     field SFVec3f   translation     0 0.015 0
-    field MFString  url             "markers/4x4-0.png"
+    field MFString  url             "../protos/markers/4x4-0.png"
 ]
 
 {
