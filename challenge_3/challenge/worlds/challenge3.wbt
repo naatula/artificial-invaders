@@ -277,7 +277,7 @@ DEF _goalie Robot {
     density -1
     mass 3
   }
-  controller "_goalie"
+  controller "red2"
   controllerArgs [
     "0"
   ]
@@ -545,7 +545,7 @@ DEF my_robot Robot {
     density -1
     mass 3
   }
-  controller "my_robot"
+  controller "blue1"
   controllerArgs [
     "0"
   ]
@@ -810,7 +810,7 @@ DEF _goalie Robot {
     density -1
     mass 3
   }
-  controller "_goalie"
+  controller "red1"
   controllerArgs [
     "0"
   ]
@@ -1078,7 +1078,7 @@ DEF my_robot Robot {
     density -1
     mass 3
   }
-  controller "my_robot"
+  controller "blue2"
   controllerArgs [
     "0"
   ]

@@ -7,9 +7,8 @@
 
 Time for integration and logic. The last released challenge is a full on
 battle arena of action where teams put their mastered skills into use. This
-challenge is a simulation of the physical battle arena where teams will
-eventually be playing against each other in October. The task is simple: create
-an AI that beats one that an another team has submitted.
+challenge is a simulation of the physical battle arena The task is simple:
+create an AI that beats one that an another team has submitted.
 
 When a solution is submitted it will be run against a solution submitted by
 another applicant team. Be prepared to create solutions for both the red and
@@ -47,8 +46,7 @@ Different energy cores values are:
 - Yellow +1
 - Green -1
 
-## Aruco
-You'll (probably) need to detect both your robots and the opponents using the Aruco markers on top of them. Use the provided OpenCV Aruco example or make your own.
-
-## Dummy bot
-We've provided you a dummy training bot to test your solutions with before submitting.
+## Controllers
+By default, the robots use the controller files blue1.py, blue2.py, red1.py
+and red2.py. These files can be created by copying the file my_robot.py and
+renaming it to the correct name.
